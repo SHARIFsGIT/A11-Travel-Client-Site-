@@ -1,0 +1,27 @@
+.product{
+    border-bottom: 1px solid lightgray;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    padding: 10px;
+}
+.product-name{
+    color: seagreen;
+    font-weight: 400;
+}
+.product_details{
+    padding-left: 10px;
+}
+.btn-regular{
+    background-color: seagreen;
+    width: 150px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration: none;
+}
+img{
+    height: 285px;
+    width:300px
+}

@@ -1,0 +1,35 @@
+.header{
+    text-align: center;
+}
+.logo{
+    height: 250px;
+    width: 20%;
+}
+.header nav {
+    background-color: black;
+    line-height: 40px;
+}
+.header nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+    padding: 11px;
+    font-size: 20px;
+}
+.header nav a:hover{
+    background-color: tomato;
+}
+.display-name{
+    font-size: 20px;
+    color: white;
+}
+.button{
+    padding: 5px;
+    margin-left: 25px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+.button:hover{
+    background-color: tomato;
+}
