@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -23,21 +24,19 @@ const ContactForm = () => {
     alert(result.status);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label className="ms-5">Name:</label>
-        <input className="ms-4" type="text" id="name" required />
-      </div>
-      <div className="mt-3 mb-3">
-        <label className="ms-5">Email:</label>
-        <input className="ms-4" type="email" id="email" required />
-      </div>
-      <div>
-        <label className="ms-5">Message:</label>
-        <textarea className="ms-2" id="message" required />
-      </div>
-      <button className="button ms-5 mt-3" type="submit">{status}</button>
-    </form>
+    <Form>
+      <h3>Drop Your FEEDBACK!</h3>
+  <Form.Group className="mb-2 mt-3" controlId="exampleForm.ControlInput1">
+    <Form.Label>Your Name</Form.Label>
+    <Form.Control type="name" placeholder="Type Your Name" />
+    <Form.Label className="mb-2 mt-2" >Email Address</Form.Label>
+    <Form.Control type="email" placeholder="Type Your E-mail" />
+  </Form.Group>
+  <Form.Group className="mb-2 mt-3" controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Comments</Form.Label>
+    <Form.Control as="textarea" rows={3} placeholder="We Appreciate Your Feedback!"/>
+  </Form.Group>
+</Form>
   );
 };
 

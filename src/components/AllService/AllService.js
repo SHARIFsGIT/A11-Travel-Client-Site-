@@ -21,7 +21,7 @@ const AllService = (props) => {
                     onClick={() => props.handleAddToCart(props.product)}
                     
                     className="btn-regular"
-                > <FontAwesomeIcon icon={faShoppingCart} />Book Now</button>
+                > <FontAwesomeIcon icon={faShoppingCart} /> Book Now</button>
             </div>
         </div>
     );

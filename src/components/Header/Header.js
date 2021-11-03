@@ -12,9 +12,9 @@ const Header = () => {
             <img className="logo" src={logo} alt="" /> 
             <nav>
                 <NavLink to="/home">Home</NavLink>
-                <NavLink to="/orders">Orders</NavLink>
-                {user.email && <NavLink to="/review">Package Review</NavLink>}
-                <NavLink to="/inventory">About Us</NavLink>
+                <NavLink to="/review">Package Review</NavLink>
+                <NavLink to="/about">About Us</NavLink>
+                {user.email && <NavLink to="/orders">Orders</NavLink>}
                 {user.email && <span className="display-name" >{user.displayName} </span>}
                 {
                     user.email ?

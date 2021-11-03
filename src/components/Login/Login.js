@@ -7,7 +7,7 @@ const Login = () => {
     const { signInUsingGoogle } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/shop';
 
 
     const handleGoogleLogin = () => {
@@ -29,11 +29,11 @@ const Login = () => {
                     <input type="submit" value="Submit" />
                 </form>
                 <p className="new">New to TOUR de WORLD? <Link to="/register">Create New Account</Link></p>
-                <div>-------or----------</div> <br/>
+                <div>---------or------------</div> <br/>
                 <button
-                    className="btn-regular"
+                    className="btn"
                     onClick={handleGoogleLogin}
-                >Google Sign In</button>
+                >Sign In With Google</button>
             </div>
         </div>
     );

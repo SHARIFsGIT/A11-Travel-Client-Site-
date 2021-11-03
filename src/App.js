@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
 import Orders from './components/Orders/Orders';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
@@ -12,6 +11,7 @@ import Register from './components/Register/Register';
 import Shipping from './components/Shipping/Shipping';
 import AuthProvider from './context/AuthProvider';
 import Footer from './components/Footer/Footer';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -26,7 +26,6 @@ function App() {
             <Route path="/home">
              <Home></Home>
             </Route>
-
             <PrivateRoute path="/review">
             <OrderReview></OrderReview>
             </PrivateRoute>
@@ -46,7 +45,7 @@ function App() {
               <Register></Register>
             </Route>
             <Route path="*">
-              <NotFound></NotFound>
+              <About></About>
             </Route>
           </Switch>
           <Footer></Footer>

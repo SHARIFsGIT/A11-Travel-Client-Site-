@@ -9,7 +9,6 @@ import AllService from '../AllService/AllService';
 const OrderReview = () => {
     const [cart, setCart] = useCart();
     const history = useHistory();
-    
     // products to be rendered on the UI
     const [displayProducts, setDisplayProducts] = useState([]);
     useEffect(() => {
@@ -17,7 +16,6 @@ const OrderReview = () => {
             .then(res => res.json())
             .then(data => {
                 setDisplayProducts(data.products);
-                
             });
     }, []);
 
@@ -32,22 +30,14 @@ const OrderReview = () => {
         else {
             product.quantity = 1;
             newCart = [...cart, product];
-        
         }
         setCart(newCart);
-    
-        // save to local storage (for now)
         addToDb(product.key);
         
     }
-    
-
     const handleProceedToShipping = () => {
-        // setCart([]);
-        // clearTheCart();
         history.push('/shipping');
     }
-
     return (
         <div className="shop-container">
             <div className="product-container">
@@ -58,7 +48,6 @@ const OrderReview = () => {
                             handleAddToCart={handleAddToCart}
                         ></AllService>)
                     }
-
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>

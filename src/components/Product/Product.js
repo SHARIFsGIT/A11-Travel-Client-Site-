@@ -9,11 +9,11 @@ const Product = (props) => {
     return (
         <div className="product">
             <div>
-                <img src={image} alt="" />
+                <img className="product-image" src={image} alt="" />
             </div>
             <div className="product_details">
                 <h4 className="product-name">{title}</h4>
-                <p><small>Duration: {duration}</small></p>
+                <p>Duration: {duration}</p>
                 <p>Cost Per Person: {price}</p>
                 <p>{description}</p>
                 <Link to="/review" className="btn-regular p-2">View Details</Link>

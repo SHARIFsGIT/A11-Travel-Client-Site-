@@ -43,7 +43,6 @@ const Shop = () => {
         
 
     }
-
     const handleSearch = event => {
         const searchText = event.target.value;
 
@@ -51,24 +50,16 @@ const Shop = () => {
 
         setDisplayProducts(matchedProducts);
     }
-
     return (
         <>
-            <div className="search-container">
-                <input
-                    type="text"
-                    onChange={handleSearch}
-                    placeholder="Search Product" />
-            </div>
- 
-                <div className="product-container">
+            <h2 className="ms-5 mt-5">Tour Packages</h2>
+                <div className="home-services">
                     {
                         displayProducts.map(product => <Product
                             key={product.key}
                             product={product}
                             handleAddToCart={handleAddToCart}
-                        >
-                            
+                        >  
                         </Product>)
                     }
                 </div>

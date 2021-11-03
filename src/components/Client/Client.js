@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import React, { Component } from "react";
+import { React, Component } from "react";
 import Slider from "react-slick";
 
 export default class CenterMode extends Component {
@@ -15,6 +15,7 @@ export default class CenterMode extends Component {
     };
     return (
       <div>
+        <h2 className="ms-5 mt-5">Our Insurance Partners</h2>
         <Slider {...settings}>
           <div>
             <img src="https://images-platform.99static.com//0snvdo6K6vvVgbYmQmf9Sp4khh4=/0x0:1024x1024/fit-in/500x500/99designs-contests-attachments/113/113975/attachment_113975607" alt="" />
@@ -33,6 +34,15 @@ export default class CenterMode extends Component {
           </div>
           <div>
 		  	<img src="https://s.tmimgcdn.com/scr/800x500/184200/arrows-invest-tech-logo-template_184226-original.jpg" alt="" />
+          </div>
+          <div>
+		  	<img src="https://logopond.com/logos/7d58bd1600ad2b0c32c2606fc8ba1b0a.png" alt="" />
+          </div>
+          <div>
+		  	<img src="https://assets.themuse.com/uploaded/companies/61/small_logo.png" alt="" />
+          </div>
+          <div>
+		  	<img src="https://digitalhealthcanada.com/wp-content/uploads/2019/03/Fraser-Health-620x310.png" alt="" />
           </div>
         </Slider>
       </div>
