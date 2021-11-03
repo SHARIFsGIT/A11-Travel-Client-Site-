@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Client from '../Client/Client';
-import ContactForm from '../Contact section/Contact';
+// import ContactForm from '../Contact section/Contact';
 import Shop from '../Shop/Shop';
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
             </div>
             <div className="d-flex justify-content-around">
                 <div>
-                <ContactForm></ContactForm>
+                {/* <ContactForm></ContactForm> */}
                 </div>
                 <div>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/rDYdeq3JW_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
