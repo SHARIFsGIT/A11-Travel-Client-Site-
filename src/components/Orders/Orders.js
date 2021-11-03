@@ -27,7 +27,7 @@ const Orders = () => {
             .then(data => setOrders(data));
     }, [])
     const handleRemoveOrder = (id)=>{
-        const confirm = window.confirm('Confirm to delete order?')
+        const confirm = window.confirm('Are You Sure To Delete?')
         if(confirm){
             const url = `https://cryptic-journey-83985.herokuapp.com/booked_service/${id}`;
         fetch(url,{
@@ -37,7 +37,6 @@ const Orders = () => {
         .then(data=>{
             if(data.deletedCount>0){
                 alert('Deleted Successfully')
-                // const OrderArray = Object.keys(orders);
                 const remainingUsers =orders.filter(order => order._id !== id);
                 setOrders(remainingUsers);
             }
@@ -47,11 +46,11 @@ const Orders = () => {
 
     return (
         <div>
-            <h2>You have placed: {orders.length} Orders</h2>
+            <h2>You have Placed: {orders.length} Orders</h2>
             <ol>
                 {orders.map(order => <li
                     key={order._id}
-                >Name: {order.name} <br /> Email: {order.email} <button onClick={()=>handleRemoveOrder(order._id)}>Remove order</button></li>)}
+                >Name: {order.name} <br /> Email: {order.email} <button onClick={()=>handleRemoveOrder(order._id)}>Remove Order</button></li>)}
             </ol>
         </div>
     );

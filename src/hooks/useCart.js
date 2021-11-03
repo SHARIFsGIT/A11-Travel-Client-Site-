@@ -21,7 +21,6 @@ const useCart = () => {
                     for (const key in savedCart) {
                         const addedProduct = products.find(product => product.key === key);
                         if (addedProduct) {
-                            // set quantity
                             const quantity = savedCart[key];
                             addedProduct.quantity = quantity;
                             storedCart.push(addedProduct);
@@ -30,8 +29,6 @@ const useCart = () => {
                     setCart(storedCart);
                 }
             })
-
-
     }, []);
 
     return [cart, setCart];

@@ -8,3 +8,6 @@
     display: grid;
     grid-template-columns:1fr 1fr;
 }
+.cart-container{
+    text-align: center;
+}

@@ -7,15 +7,15 @@ const Register = () => {
             <div>
                 <h2>Register: Create Account</h2>
                 <form onSubmit="">
-                    <input type="email" name="" id="" placeholder="Your Email" />
+                    <input type="email" placeholder="Your Email" />
                     <br />
-                    <input type="password" name="" id="" placeholder="Your Password" />
+                    <input type="password" placeholder="Your Password" />
                     <br />
-                    <input type="password" name="" id="" placeholder="Re-enter Password" />
+                    <input type="password" placeholder="Re-enter Password" />
                     <br />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>Already have an account? <Link to="/login">Login</Link></p>
+                <p>Already have an account? <Link  to="/login">Login</Link></p>
                 <div>----------or-------------</div>
                 <button className="btn-regular">Google Sign In</button>
             </div>

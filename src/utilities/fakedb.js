@@ -1,4 +1,3 @@
-// use local storage as your db for now
 const addToDb = id => {
   const exists = getDb();
   let shopping_cart = {};
@@ -35,7 +34,6 @@ const removeFromDb = id => {
     updateDb(shopping_cart);
   }
 }
-
 const getStoredCart = () => {
   const exists = getDb();
   return exists ? JSON.parse(exists) : {};
