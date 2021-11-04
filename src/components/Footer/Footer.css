@@ -79,6 +79,9 @@ ul{
 	text-align: center;
 	margin-top: 5px;
 }
+.footer p{
+	text-align: center;
+}
 
 /*responsive*/
 @media(max-width: 767px){
