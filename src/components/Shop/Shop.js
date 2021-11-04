@@ -12,7 +12,7 @@ const Shop = () => {
     // products to be rendered on the UI
     const [displayProducts, setDisplayProducts] = useState([]);
     useEffect(() => {
-        fetch(`https://cryptic-journey-83985.herokuapp.com/services`)
+        fetch(`https://tourism360.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products);
@@ -40,14 +40,15 @@ const Shop = () => {
         <>
             <h2 className="ms-5 mt-5">Tour Packages</h2>
                 <div className="home-services">
-                    {
+                   {
                         displayProducts.map(product => <Product
                             key={product.key}
                             product={product}
                             handleAddToCart={handleAddToCart}
                         >  
-                        </Product>)
-                    }
+                        </Product>)                 
+                   }
+                    
                 </div>
         </>
     );

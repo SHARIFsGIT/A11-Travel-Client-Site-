@@ -1,10 +1,9 @@
-console.log(process.env);
 const firebaseConfig = {
-  apiKey: "AIzaSyBCOFzYzWDjeQxDBYmxVme1RA0w_KUz1cc",
-  authDomain: "tourism-492c1.firebaseapp.com",
-  projectId: "tourism-492c1",
-  storageBucket: "tourism-492c1.appspot.com",
-  messagingSenderId: "109121194628",
-  appId: "1:109121194628:web:b5ff730a59d802cd3250d1"
+  apiKey: "AIzaSyAu4cv0CLYrHqOw9LFGk692a87UQws2-RA",
+  authDomain: "tourdeworld-f9a0e.firebaseapp.com",
+  projectId: "tourdeworld-f9a0e",
+  storageBucket: "tourdeworld-f9a0e.appspot.com",
+  messagingSenderId: "923807819876",
+  appId: "1:923807819876:web:e1efc4861f4d59ced25771"
 };
     export default firebaseConfig;

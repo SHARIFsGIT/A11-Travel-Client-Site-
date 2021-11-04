@@ -8,9 +8,10 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
     const history = useHistory();
+    console.log(user);
     
     useEffect(() => {
-        fetch(`https://cryptic-journey-83985.herokuapp.com/booked_service?email=${user.email}`, {
+        fetch(`https://tourism360.herokuapp.com/booked_service?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -22,14 +23,13 @@ const Orders = () => {
                 else if (res.status === 401) {
                     history.push('/login');
                 }
-
             })
             .then(data => setOrders(data));
     }, [])
     const handleRemoveOrder = (id)=>{
         const confirm = window.confirm('Are You Sure To Delete?')
         if(confirm){
-            const url = `https://cryptic-journey-83985.herokuapp.com/booked_service/${id}`;
+            const url = `https://tourism360.herokuapp.com/booked_service/${id}`;
         fetch(url,{
             method:'DELETE'
         })

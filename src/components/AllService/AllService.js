@@ -12,10 +12,11 @@ const AllService = (props) => {
                 <img src={image} alt="" />
             </div>
             <div>
+                <br />
                 <h4 className="product-name">{title}</h4>
-                <p><small>{duration}</small></p>
+                <p>Duration: <small>{duration}</small></p>
                 <p>Price: {price}</p>
-                <p>{description}</p>
+                <p>Description: {description}</p>
                 <br />
                 <button
                     onClick={() => props.handleAddToCart(props.product)}

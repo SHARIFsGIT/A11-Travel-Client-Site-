@@ -12,6 +12,8 @@ import Shipping from './components/Shipping/Shipping';
 import AuthProvider from './context/AuthProvider';
 import Footer from './components/Footer/Footer';
 import About from './components/About/About';
+import PageNotFound from './components/PageNotFound/PageNotFound';
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -23,29 +25,35 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/home">
+            <Route exact path="/home">
              <Home></Home>
             </Route>
-            <PrivateRoute path="/review">
+            <PrivateRoute exact path="/review">
             <OrderReview></OrderReview>
             </PrivateRoute>
-            <PrivateRoute path="/shipping">
+            <PrivateRoute exact path="/shipping">
               <Shipping></Shipping>
             </PrivateRoute>
-            <PrivateRoute path="/placeorder">
+            <PrivateRoute exact path="/placeorder">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
-            <PrivateRoute path="/orders">
+            <PrivateRoute exact path="/orders">
               <Orders></Orders>
             </PrivateRoute>
-            <Route path="/login">
+            <Route exact path="/login">
               <Login></Login>
             </Route>
-            <Route path="/register">
+            <Route exact path="/register">
               <Register></Register>
             </Route>
-            <Route path="*">
+            <Route exact path="/about">
               <About></About>
+            </Route>
+            <Route exact path="/contact">
+              <ContactUs></ContactUs>
+            </Route>
+            <Route path="*">
+              <PageNotFound></PageNotFound>
             </Route>
           </Switch>
           <Footer></Footer>

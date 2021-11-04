@@ -11,7 +11,7 @@ const Shipping = () => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('https://cryptic-journey-83985.herokuapp.com/booked_service', {
+        fetch('https://tourism360.herokuapp.com/booked_service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

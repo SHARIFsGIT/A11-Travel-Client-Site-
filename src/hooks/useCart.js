@@ -7,7 +7,7 @@ const useCart = () => {
     useEffect(() => {
         const savedCart = getStoredCart();
         const keys = Object.keys(savedCart);
-        fetch('https://cryptic-journey-83985.herokuapp.com/products/byKeys', {
+        fetch('https://tourism360.herokuapp.com/products/byKeys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

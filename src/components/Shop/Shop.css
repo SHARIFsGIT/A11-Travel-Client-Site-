@@ -1,8 +1,3 @@
-/* .shop-container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    margin-bottom: 50px;
-} */
 .home-services{
     border-right: 1px solid lightgray;
     display: grid;

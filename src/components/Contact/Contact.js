@@ -12,7 +12,7 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("https://cryptic-journey-83985.herokuapp.com/contact", {
+    let response = await fetch("https://tourism360.herokuapp.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

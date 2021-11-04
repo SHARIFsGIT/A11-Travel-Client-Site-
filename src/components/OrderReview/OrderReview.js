@@ -5,6 +5,7 @@ import { addToDb} from '../../utilities/fakedb';
 import { useHistory } from 'react-router';
 import './OrderReview.css'
 import AllService from '../AllService/AllService';
+import { Spinner } from 'react-bootstrap';
 
 const OrderReview = () => {
     const [cart, setCart] = useCart();
@@ -12,7 +13,7 @@ const OrderReview = () => {
     // products to be rendered on the UI
     const [displayProducts, setDisplayProducts] = useState([]);
     useEffect(() => {
-        fetch(`https://cryptic-journey-83985.herokuapp.com/services`)
+        fetch(`https://tourism360.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => {
                 setDisplayProducts(data.products);
@@ -41,13 +42,24 @@ const OrderReview = () => {
     return (
         <div className="shop-container">
             <div className="product-container">
-                {
+                    {
+                        (displayProducts.length ===0) ?
+                        <div className="d-flex justify-content-between">
+                            <div>
+                            </div>
+                            <div >
+                                <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                          </Spinner>
+                            </div>
+                        </div>
+                        : 
                         displayProducts.map(product =><AllService
                             key={product.key}
                             product={product}
                             handleAddToCart={handleAddToCart}
-                        ></AllService>)
-                    }
+                        ></AllService>)                
+                   }
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>

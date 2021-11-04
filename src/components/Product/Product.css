@@ -23,6 +23,7 @@
 img{
     height: 285px;
     width:420px;
+    border-radius: 5px;
 }
 .product-image{
     border-radius: 10px;

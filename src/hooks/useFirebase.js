@@ -38,6 +38,9 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [])
 
+    // console.log(user);
+    
+
     return {
         user,
         loading,
