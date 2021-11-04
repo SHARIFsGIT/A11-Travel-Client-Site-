@@ -2,11 +2,11 @@
 
 You can find the live site link here (https://tourdeworld-f9a0e.web.app/)
 
-## Behind The Wall
+# Behind The Wall
 
 You can book any tour packages from this site as well as can calculate your approx. cost per head. We appriciate your feedback for that we have a special contact section to communicate with us.
 
-### Features & Functionality
+# Features & Functionality
 
 ## You can communicate with us easily through our contact section.
 
